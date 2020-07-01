@@ -6,7 +6,7 @@ var genres= [ "1996494362", // rap
 "7391033164" // Jazz
 ];
 var addedGenres = [];
-
+var allActivities = [];
 
 
 
@@ -18,7 +18,7 @@ $(document).ready(function (){
         var playlistID = $(this).data("value");
         addedGenres.push(playlistID.toString());
         console.log(addedGenres);
-        $(event).off('click');
+        $(this).off('click');
     })
 
     $("#submitActivity").on("click",function(){
@@ -47,20 +47,24 @@ $(document).ready(function (){
                     duration: response.data[songIndex].duration
                 }
                 console.log(song)
-                songs.push(song);
+                songs.push(JSON.stringify(song));
+                console.log(songs)
             });
             
         
         }
+        console.log(songs);
         var activity = {
             name:$("#activityName").val(),
             time: $("#timePeriod").val(),
-            songs: songs
+            playlist:songs
         }
+        console.log(activity);
         var parsedActivity = JSON.stringify(activity);
         console.log(activity);
         localStorage.setItem($("#activityName").val(),parsedActivity);
         resetPage();
+        allActivities.push(activity);
     })
     
 });
