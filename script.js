@@ -6,8 +6,12 @@ var genres= [ "1996494362", // rap
 "7391033164" // Jazz
 ];
 var addedGenres = [];
-var allActivities = [];
 
+// created a var to store the list of all saved activities in one array instead of creating a new item for each activity in localStor.This way all activities can be fetched all together from activityPlaylist
+var allActivities=JSON.parse(localStorage.getItem("activityPlaylist"));
+if(allActivities === null) {
+    allActivities =[];
+}
 
 
 $(document).ready(function (){
@@ -54,17 +58,25 @@ $(document).ready(function (){
         
         }
         console.log(songs);
+         
         var activity = {
             name:$("#activityName").val(),
             time: $("#timePeriod").val(),
             playlist:songs
         }
-        console.log(activity);
-        var parsedActivity = JSON.stringify(activity);
-        console.log(activity);
-        localStorage.setItem($("#activityName").val(),parsedActivity);
-        resetPage();
+        
+
+       // pushin new added activities to the allActivities arr
         allActivities.push(activity);
+        console.log(activity);
+        //storing the stringified version of allActivities in parsedAllActivities
+        var parsedAllActivities = JSON.stringify(allActivities);
+        console.log(parsedAllActivities);
+        
+        localStorage.setItem("activityPlaylist",parsedAllActivities);
+        resetPage();
+
+        
     })
     
 });
