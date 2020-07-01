@@ -12,10 +12,15 @@ var genres= [ "1996494362", // rap
 "4994552284", //Pop
 "1306931615", //Rock
 "1132760061", //Alternative
-
+"7391033164" // Jazz
 ];
 
 
 $.ajax(settings).done(function (response) {
 	console.log(response.data);
+});
+
+
+$(document).ready(function (){
+    $(".")
 });
