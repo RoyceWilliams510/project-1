@@ -10,7 +10,9 @@ allActivities.forEach(function(activity, i){
 
     //parsing over playlist arr to get 
     var tabledata = activity.playlist.map(function(item) {
-      return JSON.parse(item);
+      var parsedItem = JSON.parse(item);
+    //   parsedItem.duration = moment.duration(parsedItem.duration, "seconds").format("m:ss");
+      return parsedItem;
     });
     //create Tabulator on DOM element with id "example-table"
     var table = new Tabulator("#playlist-table-" + i, {
