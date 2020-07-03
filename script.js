@@ -16,7 +16,9 @@ if(allActivities === null) {
 
 $(document).ready(function (){
     // Event listener
-    
+    $('#current-date').text(moment().format('MMMM Do YYYY, h:mm a'));
+    $('#timePeriod').val(moment().format("H"))
+
     $(".collection-item").on("click", function(){
         console.log($(this).data("value"));
         var playlistID = $(this).data("value");
