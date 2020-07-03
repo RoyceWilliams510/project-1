@@ -59,25 +59,29 @@ $(document).ready(function (){
             
         
         }
-        console.log(songs);
+        // set up 2 sec wait to give some time for all 5 api calls to return data 
+        setTimeout(function() {
+
+            console.log(songs);
          
-        var activity = {
-            name:$("#activityName").val(),
-            time: $("#timePeriod").val(),
-            playlist:songs
-        }
-        
-
-       // pushin new added activities to the allActivities arr
-        allActivities.push(activity);
-        console.log(activity);
-        //storing the stringified version of allActivities in parsedAllActivities
-        var parsedAllActivities = JSON.stringify(allActivities);
-        console.log(parsedAllActivities);
-        
-        localStorage.setItem("activityPlaylist",parsedAllActivities);
-        resetPage();
-
+            var activity = {
+                name:$("#activityName").val(),
+                time: $("#timePeriod").val(),
+                playlist:songs
+            }
+            
+           // pushin new added activities to the allActivities arr
+            allActivities.push(activity);
+            console.log(activity);
+            //storing the stringified version of allActivities in parsedAllActivities
+            var parsedAllActivities = JSON.stringify(allActivities);
+            console.log(parsedAllActivities);
+            
+            localStorage.setItem("activityPlaylist",parsedAllActivities);
+            resetPage();
+    
+        }, 2000)
+       
         
     })
     
