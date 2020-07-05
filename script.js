@@ -65,11 +65,13 @@ $(document).ready(function (){
             $.ajax(settings).done(function (response) {
                 var songIndex = Math.floor(Math.random()*25)
                 console.log(songIndex);
+                console.log(response.data[songIndex])
                 var song= {
                     title: response.data[songIndex].title,
                     artist: response.data[songIndex].artist.name,
                     album: response.data[songIndex].album.title, 
-                    duration: response.data[songIndex].duration
+                    duration: response.data[songIndex].duration,
+                    songId:response.data[songIndex].id
                 }
                 console.log(song)
                 songs.push(JSON.stringify(song));
