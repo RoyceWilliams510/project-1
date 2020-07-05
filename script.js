@@ -1,3 +1,22 @@
+function showActivities(){
+    var table = new Tabulator("#activity-list", {
+        height:205, 
+        data: allActivities, 
+        layout:"fitColumns", 
+        columns:[
+            {title:"Activity", field:"name", hozAlign:"center"},
+            {title:"Time", field:"time", hozAlign:"center"}
+            
+        ],
+    
+      
+    });
+
+}
+
+
+
+
 
 var genres= [ "1996494362", // rap
 "4994552284", //Pop
@@ -84,7 +103,8 @@ $(document).ready(function (){
        
         
     })
-    
+
+    showActivities();
 });
 
 function resetPage(){
