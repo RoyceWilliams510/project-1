@@ -45,5 +45,3 @@ allActivities.forEach(function(activity, i){
     });
 
 });
-//PROBLEM! data in the table not populating becouse currenctly we are saving an empty Playlist array to the localStor. 
-//Posible fix: to set a timeout 
