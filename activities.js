@@ -1,3 +1,15 @@
+function formatDuration(duration){
+    var sec_num = parseInt(duration, 10); // don't forget the second param
+    var minutes = Math.floor(sec_num / 60);
+    var seconds = sec_num - (minutes * 60);
+
+   
+    if (seconds < 10) {seconds = "0"+seconds;}
+    return minutes + ':' + seconds;
+    
+
+}
+
 var allActivities=JSON.parse(localStorage.getItem("activityPlaylist"));
 if(allActivities === null) {
     allActivities =[];
@@ -10,7 +22,10 @@ allActivities.forEach(function(activity, i){
 
     //parsing over playlist arr to get 
     var tabledata = activity.playlist.map(function(item) {
-      return JSON.parse(item);
+      var parsedItem = JSON.parse(item);
+      parsedItem.duration = formatDuration(parsedItem.duration);
+      return parsedItem;
+
     });
     //create Tabulator on DOM element with id "example-table"
     var table = new Tabulator("#playlist-table-" + i, {
@@ -30,5 +45,3 @@ allActivities.forEach(function(activity, i){
     });
 
 });
-//PROBLEM! data in the table not populating becouse currenctly we are saving an empty Playlist array to the localStor. 
-//Posible fix: to set a timeout 

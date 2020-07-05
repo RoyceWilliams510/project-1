@@ -7,82 +7,87 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link href="https://unpkg.com/tabulator-tables@4.7.1/dist/css/tabulator.min.css" rel="stylesheet">
     </head>
     <body>
         <div style="position: relative;" class="container">
-        <h3 style="font-weight: 900; color: black; font-size: 60px;">Plan N' Jam</h3>
+        <div class="row">
+         <div class="col s6">  <h3 style="font-weight: 900; color: black; font-size: 60px;"><a href="index.html" class="black-text">Plan N' Jam</a></h3></div>
+         <div class="col s6" id="current-date" style="text-align: right; margin-top: 1.9466666667rem;"></div>
+        </div>
         <nav class="#ffffff white z-depth-0">
             <div class="nav-wrapper z-depth-0">
-              <ul id="nav-mobile" style="font-weight: 900;"class=" z-depth-0 left hide-on-med-and-down">
+              <ul id="nav-mobile" style="font-weight: 900;"class=" z-depth-0 left">
                 <li><a href="activities.html" class="black-text">View Activities</a></li>
                 <li><a href="" class="black-text">The Team</a></li>
-                <li><a href="" class="black-text">Acknowledgements</a></li>
 
               </ul>
             </div>
-          </nav>
+          </nav>  
         </div>
         <br>
 
-        <div class="row" style="margin: 0;">
-            <div class="col s5 m3  #fdd835 yellow darken-1">
-            <h4 style="font-weight: 900; margin-bottom: 90px;">About Our Project</h4>
-            <br>
-            <br>
-            <br>
-            <p class="right" style="font-size: 20px; margin-right: 40px;  font-weight: 900;">Explore -></p>
+        <div class="row" style="margin: 0; ">
+            <div style="height: 286px;" class="col s7 l3  #fdd835 yellow darken-1">
+            <h4 style="font-weight: 900;">About Our Project</h4>
+          
+            
+            <p class="right" style="font-size: 20px; margin-right: 40px; margin-top: 90px; font-weight: 900;"><a href="" class="black-text">Explore -></a></p>
             
             </div>
 
-            <div class="col s7 m2 right #fbc02d yellow darken-2" style="background-image: url(https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80); background-position: center; width: 75%; height: 286px;">
+            <div class="col s5 l9  #fbc02d yellow darken-2" style="background-image: url(https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80); background-position: center; background-size:cover;  height: 286px; ">
                 
             </div>
         </div>
 
-        <div class="row" style="margin: 0;">
-            <div class="col s7 m2 #00acc1 cyan darken-1" style="background-image: url(https://images-na.ssl-images-amazon.com/images/I/91OeYnLoCJL._SL1500_.jpg); background-position: center; width: 75%; height: 286px; background-size:cover;">
+        <div class="row" style="margin: 0; height: 286px;">
+            <div class="col s5 l9 #00acc1 cyan darken-1" style="background-image: url(https://images-na.ssl-images-amazon.com/images/I/91OeYnLoCJL._SL1500_.jpg); background-position: center; height: 286px; background-size:cover;">
                 
                 </div>
     
-                <div class="col s5 m3 right #00bcd4 cyan">
-                    <h4 style="font-weight: 900; margin-bottom: 90px;">Meet The Team</h4>
-                    <br>
-                    <br>
-                    <br>
-                    <p class="left" style="font-size: 20px; margin-right: 40px; padding-top: px; font-weight: 900;">Explore -></p>
+                <div style="height: 286px;" class="col s7 l3  #00bcd4 cyan">
+                    <h4 class="right" style="font-weight: 900;">Meet The Team</h4>
+                   
+                    <p class="left" style="font-size: 20px; margin-right: 40px;  font-weight: 900;"><a href="" class="black-text">Explore -></a></p>
                 </div>
         </div>
 
-              <div class="row" style="margin: 0; ">
-                <div class="col s5 m3 #f44336 red">
-                    <h4 style="font-weight: 900; margin-bottom: 90px;">Get Started</h4>
-                    <br>
-                    <br>
-                    <br>
-                    <p class="left" style="font-size: 20px; margin-right: 40px; padding-top: px; font-weight: 900;">Go -></p>
+              <div class="row" style="margin: 0;">
+                <div style="height: 286px;" class="col s5 l3 #f44336 red">
+                    <h4 style="font-weight: 900;">Get Started</h4>
+
+
+      
+                    <p class="left" style="font-size: 20px; margin-right: 40px; font-weight: 900; margin-top: 90px;"><a href="" class="black-text">Go -></a></p>
                     </div>
         
-                    <div class="col s7 m2 right #d32f2f red darken-2" style="background-image: url(https://images.alphacoders.com/105/1059392.png); background-position: center; background-size:cover; width: 75%; height: 286px;">
+                    <div class="col s7 l9  #d32f2f red darken-2" style="background-image: url(https://images.alphacoders.com/105/1059392.png); background-position: center; background-size:cover; height: 286px;">
                         
                     </div>
               </div>
 
   <br>
 
-<div id="activityAdder " class="row #304ffe indigo accent-4">    
-    <div class="col s5">
+
+
+
+
+
+<div id="activityAdder " class="row">    
+    <div class="col s5  #ffc107 amber">
             <div class="row">
                 <form class="col s6">
                   <div class="row">
                     <div class="input-field col s12">
-                      <textarea id="activityName" placeholder="Enter Activity" class="materialize-textarea"></textarea>
+                      <textarea id="activityName" placeholder="Enter Activity" class="materialize-textarea white-text"></textarea>
                     
                     </div>
                   </div>
                 </form>
-                <label>Time Select</label>
+                <label class="white-text">Time Select</label>
                 <div class="col s6">
-                <select class="browser-default" id = "timePeriod">
+                <select class="browser-default #ff8f00 amber darken-3 white-text" id = "timePeriod">
                     <option value="0">12 AM</option>
                     <option value="1">1 AM</option>
                     <option value="2">2 AM</option>
@@ -114,21 +119,25 @@
               </div>
 
     
-              <h6>Genres</h6>
+              <h6 class="white-text">Genres</h6>
               <div class="collection">
-                <a href="#!" class="collection-item" id = "rap" data-value = "1996494362">Rap</a>
-                <a href="#!" class="collection-item" id = "rock" data-value = "1306931615"> Rock </a>
-                <a href="#!" class="collection-item" id = "pop" data-value = "4994552284">Pop</a>
-                <a href="#!" class="collection-item" id = "jazz" data-value = "7391033164">Jazz</a>
-                <a href="#!" class="collection-item" id = "alternative" data-value="1132760061">Alternative</a>
+                <a href="#!" class="collection-item white-text #ff8f00 amber darken-3" id = "rap" data-value = "1996494362">Rap</a>
+                <a href="#!" class="collection-item white-text #ff8f00 amber darken-3" id = "rock" data-value = "1306931615"> Rock </a>
+                <a href="#!" class="collection-item white-text #ff8f00 amber darken-3" id = "pop" data-value = "4994552284">Pop</a>
+                <a href="#!" class="collection-item white-text #ff8f00 amber darken-3" id = "jazz" data-value = "7391033164">Jazz</a>
+                <a href="#!" class="collection-item white-text #ff8f00 amber darken-3" id = "alternative" data-value="1132760061">Alternative</a>
               </div>
               
             <div class="row">
                 <div class="col s10"></div>
-              <a class="btn-floating btn-large cyan pulse" id = "submitActivity"><i class="material-icons">+</i></a>
+              <a class="btn-floating btn-large #ff8f00 amber darken-3 pulse" id = "submitActivity"><i class="material-icons">+</i></a>
             </div>
   
 
+
+
+    </div>
+    <div class="col s6" id="activity-list">
 
 
     </div>
@@ -142,6 +151,7 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    
         <script src="https://momentjs.com/downloads/moment.js"></script>
+        <script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.7.1/dist/js/tabulator.min.js"></script>
         <script src="script.js"></script>
 
     </body>
