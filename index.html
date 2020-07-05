@@ -7,10 +7,14 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link href="https://unpkg.com/tabulator-tables@4.7.1/dist/css/tabulator.min.css" rel="stylesheet">
     </head>
     <body>
         <div style="position: relative;" class="container">
-        <h3 style="font-weight: 900; color: black; font-size: 60px;"><a href="index.html" class="black-text">Plan N' Jam</a></h3>
+        <div class="row">
+         <div class="col s6">  <h3 style="font-weight: 900; color: black; font-size: 60px;"><a href="index.html" class="black-text">Plan N' Jam</a></h3></div>
+         <div class="col s6" id="current-date" style="text-align: right; margin-top: 1.9466666667rem;"></div>
+        </div>
         <nav class="#ffffff white z-depth-0">
             <div class="nav-wrapper z-depth-0">
               <ul id="nav-mobile" style="font-weight: 900;"class=" z-depth-0 left">
@@ -133,6 +137,10 @@
 
 
     </div>
+    <div class="col s6" id="activity-list">
+
+
+    </div>
 </div>
 
 
@@ -143,6 +151,7 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    
         <script src="https://momentjs.com/downloads/moment.js"></script>
+        <script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.7.1/dist/js/tabulator.min.js"></script>
         <script src="script.js"></script>
 
     </body>

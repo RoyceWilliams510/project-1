@@ -1,3 +1,22 @@
+function showActivities(){
+    var table = new Tabulator("#activity-list", {
+        height:205, 
+        data: allActivities, 
+        layout:"fitColumns", 
+        columns:[
+            {title:"Activity", field:"name", hozAlign:"center"},
+            {title:"Time", field:"time", hozAlign:"center"}
+            
+        ],
+    
+      
+    });
+
+}
+
+
+
+
 
 var genres= [ "1996494362", // rap
 "4994552284", //Pop
@@ -16,7 +35,9 @@ if(allActivities === null) {
 
 $(document).ready(function (){
     // Event listener
-    
+    $('#current-date').text(moment().format('MMMM Do YYYY, h:mm a'));
+    $('#timePeriod').val(moment().format("H"))
+
     $(".collection-item").on("click", function(){
         console.log($(this).data("value"));
         var playlistID = $(this).data("value");
@@ -57,28 +78,36 @@ $(document).ready(function (){
             
         
         }
-        console.log(songs);
+        // set up 2 sec wait to give some time for all 5 api calls to return data 
+        setTimeout(function() {
+
+            console.log(songs);
          
-        var activity = {
-            name:$("#activityName").val(),
-            time: $("#timePeriod").val(),
-            playlist:songs
-        }
-        
+            var activity = {
+                name:$("#activityName").val(),
+                time: $("#timePeriod").val(),
+                playlist:songs
+            }
+            
+           // pushin new added activities to the allActivities arr
+            allActivities.push(activity);
 
-       // pushin new added activities to the allActivities arr
-        allActivities.push(activity);
-        console.log(activity);
-        //storing the stringified version of allActivities in parsedAllActivities
-        var parsedAllActivities = JSON.stringify(allActivities);
-        console.log(parsedAllActivities);
-        
-        localStorage.setItem("activityPlaylist",parsedAllActivities);
-        resetPage();
-
+            showActivities();
+            
+            console.log(activity);
+            //storing the stringified version of allActivities in parsedAllActivities
+            var parsedAllActivities = JSON.stringify(allActivities);
+            console.log(parsedAllActivities);
+            
+            localStorage.setItem("activityPlaylist",parsedAllActivities);
+            resetPage();
+    
+        }, 2000)
+       
         
     })
-    
+
+    showActivities();
 });
 
 function resetPage(){
