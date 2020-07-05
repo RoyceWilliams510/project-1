@@ -91,6 +91,9 @@ $(document).ready(function (){
             
            // pushin new added activities to the allActivities arr
             allActivities.push(activity);
+
+            showActivities();
+            
             console.log(activity);
             //storing the stringified version of allActivities in parsedAllActivities
             var parsedAllActivities = JSON.stringify(allActivities);
