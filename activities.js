@@ -74,7 +74,7 @@ allActivities.forEach(function(activity, i){
     });
     //create Tabulator on DOM element with id "example-table"
     var table = new Tabulator("#playlist-table-" + i, {
-        height:205, // set height of table (in CSS or here), this enables the Virtual DOM and improves render speed dramatically (can be any valid css height value)
+        height:300, // set height of table (in CSS or here), this enables the Virtual DOM and improves render speed dramatically (can be any valid css height value)
         data:tabledata, //assign data to table
         layout:"fitColumns", //fit columns to width of table (optional)
         columns:[ {//create column group
