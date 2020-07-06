@@ -68,9 +68,14 @@ allActivities.forEach(function(activity, i){
     //parsing over playlist arr to get 
     var tabledata = activity.playlist.map(function(item) {
       var parsedItem = JSON.parse(item);
+      var songIdHolder = parsedItem.songId;
+      var playButton = $("<button id = '"+songIdHolder+"' class = 'playBtn' value = '"+ songIdHolder+"'>Play</button>");
+      console.log(playButton);
       parsedItem.duration = formatDuration(parsedItem.duration);
+      parsedItem.songId = playButton;
+      console.log(parsedItem);
       return parsedItem;
-
+      
     });
     //create Tabulator on DOM element with id "example-table"
     var table = new Tabulator("#playlist-table-" + i, {
@@ -85,6 +90,7 @@ allActivities.forEach(function(activity, i){
                 {title:"Album", field:"album", hozAlign:"center"},
                 {title:"Duration", field:"duration", hozAlign:"center"},
                 {title: "Play", field:"songId",hozAlign:"center",formatter:formatPlayBtn}
+
             ],
         }],
       

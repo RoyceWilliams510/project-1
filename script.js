@@ -98,6 +98,7 @@ $(document).ready(function (){
                 console.log(response);
                 var songIndex = Math.floor(Math.random()*25)
                 console.log(songIndex);
+                console.log(response.data[songIndex])
                 var song= {
                     title: response.data[songIndex].title,
                     artist: response.data[songIndex].artist.name,
