@@ -1,3 +1,14 @@
 .tabulator {
     margin-bottom: 25px;
 }
+
+
+body {
+    display: flex;
+    min-height: 100px;
+    flex-direction: column;
+  }
+
+  body {
+    flex: 1 0 auto;
+  }
