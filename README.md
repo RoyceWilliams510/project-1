@@ -1,6 +1,6 @@
 # Plan N' Jam
 
-The objective of this project is to automatically generate a music playlist based on the selected genres by the user for each activity of the day. The user can enter the activity and select the timeslot then the playlist will be randomly generated based on the selected musical genres and saved to the page. All generated playlists will be available to the user in View Activity page, where user can view the upcoming activities and listen to generated playlists via Spotify.
+The objective of this project is to automatically generate a music playlist based on the selected genres by the user for each activity of the day. The user can enter the activity and select the timeslot then the playlist will be randomly generated based on the selected musical genres and saved to the page. All generated playlists will be available to the user in View Activity page, where user can view the upcoming activities and listen to generated playlists via Deezer Player Widget.
 
 ## Link to the Deployed application 
 -   [Plan N' Jam](https://liza-p.github.io/project-1/)
