@@ -73,6 +73,7 @@ $(document).ready(function (){
     $(".collection-item").on("click", function(){
         console.log($(this).data("value"));
         var playlistID = $(this).data("value");
+        $(this).addClass("darken-4");
         addedGenres.push(playlistID.toString());
         console.log(addedGenres);
         $(this).off('click');
@@ -149,5 +150,5 @@ $(document).ready(function (){
 function resetPage(){
     $("#activityName").val("");
     addedGenres = [];
-
+    $(".collection-item").removeClass("darken-4");
 }
