@@ -39,6 +39,19 @@ function formatTime(time) {
     };
     return timeMap[time];
 }
+function formatPlayBtn(cell){
+    return `
+        <iframe
+            scrolling="no"
+            frameborder="0"
+            allowTransparency="true"
+            src="https://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=false&width=80&height=80&color=007FEB&layout=dark&size=small&type=tracks&id=${cell.getValue()}&app_id=1"
+            width="80"
+        height="80">
+        </iframe>
+    `;
+
+}
 
 
 var allActivities=JSON.parse(localStorage.getItem("activityPlaylist"));
@@ -71,6 +84,7 @@ allActivities.forEach(function(activity, i){
                 {title:"Artist", field:"artist", hozAlign:"center"},
                 {title:"Album", field:"album", hozAlign:"center"},
                 {title:"Duration", field:"duration", hozAlign:"center"},
+                {title: "Play", field:"songId",hozAlign:"center",formatter:formatPlayBtn}
             ],
         }],
       
