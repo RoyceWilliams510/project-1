@@ -29,7 +29,7 @@ When a user enters the Activity Name, Select the time slot from the dropdown
 
 - Given a user want to listen to the generated playlist
 - When user navigates to the View Activity Page
-- Then user can listen to the generated playlist via Spotify 
+- Then user can listen to the generated playlist
 
 ## Technologies Used 
 
@@ -39,12 +39,12 @@ When a user enters the Activity Name, Select the time slot from the dropdown
 - CSS - styles html elements on page
 - GitHub - hosts repository that can be deployed to GitHub Pages
 - Deezer API allows you to listen to more than 30 million tracks, create your own playlists, and share your favourite tracks.
-- Spotify Play button - For users who are not logged in on their Spotify account, the Spotify Play button plays a 30-second long audio preview, and then the users are prompted to either login or to sign up.
+- Deezer Player Widget 
 
 
 ![](./img/homePage.png)
 - 
-![](./img/activitiesPage.png)
+![](./img/activities.png)
 
 
 ## Contributors
